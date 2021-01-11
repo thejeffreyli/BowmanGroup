@@ -20,11 +20,12 @@ def main():
     plt.title("Histogram CH4 1.0")
     plt.xlabel('Potentials (cm^-1)')
     plt.ylabel('Frequency')    
-    # plt.xlim(0, 20000)    
+    plt.xlim(0, 40000)    
     # plt.ylim(0, 40000)     
     
     df = df.to_numpy()
-    
+  
+    print("number of energy values: ", 197434 )
     print("maximum:" , max(df))    
     print("minimum:" , min(df))
     print("median:" , median(df))       
@@ -37,11 +38,12 @@ def main():
     plt.title("Histogram CH4 0.5")
     plt.xlabel('Potentials (cm^-1)')
     plt.ylabel('Frequency')    
-    # plt.xlim(0, 20000)    
+    plt.xlim(0, 40000)    
     # plt.ylim(0, 40000)     
     
     df = df.to_numpy()
     
+    print("number of energy values: ", 195578 )    
     print("maximum:" , max(df))    
     print("minimum:" , min(df))
     print("median:" , median(df))     

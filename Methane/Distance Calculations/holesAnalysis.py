@@ -43,28 +43,28 @@ def main():
     xArr, yArr = [], [] #249 holes
     
     for i in range(len(HH_data)): # X Axis: HH shortest
-        xArr.append(HH_data[i][5])
-    # for i in range(len(CH_data)): # Y Axis: CH shortest
-    #     yArr.append(CH_data[i][0])    
-    for i in range(len(CH_data)): # Y Axis: CH longest
-        yArr.append(CH_data[i][0])           
+        xArr.append(HH_data[i][0])
+    for i in range(len(CH_data)): # Y Axis: CH shortest
+        yArr.append(CH_data[i][0])    
+    # for i in range(len(CH_data)): # Y Axis: CH longest
+    #     yArr.append(CH_data[i][0])           
         
     fig, ax = plt.subplots()
     plt.scatter(xArr, yArr, s = 10, c = 'blue', alpha = 1) 
     
-    plt.xlabel('Longest HH')
+    plt.xlabel('Shortest HH')
     plt.ylabel('Shortest CH')
     # plt.xlim(0.25, 1.5)    
     # plt.ylim(0.25, 1.5)
-    # plt.axhline(y=1, linewidth=1, color='r')
-    plt.title("Shortest CH v. Longest HH")
+    plt.axhline(y=1, linewidth=1, color='r')
+    plt.title("Shortest CH v. Shortest HH")
 
     "--------------------------CH distance (Y) > 1--------------------------"  
 
     
     # print(yArr)
     indexes = [index for index, value in enumerate(yArr) if value > 1]
-    # print(indexes) # 40 holes with CH > 1.0 
+    print(indexes) # 40 holes with CH > 1.0 
       
 
      
