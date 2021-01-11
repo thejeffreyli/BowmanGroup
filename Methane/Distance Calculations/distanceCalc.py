@@ -117,7 +117,7 @@ def countHH(indexList):
                         
     return count1, count2, count3, count4, count5, count6    
 
-# seeing which HH is the shortest
+# seeing which CH is the shortest
 def countCH(indexList):
     count1, count2, count3, count4 = (0 for i in range(4))
     for i in range(len(indexList)):
